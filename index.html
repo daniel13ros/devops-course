@@ -3,127 +3,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Daniel Rosman | CS Student & DevOps Enthusiast</title>
+    <title>Daniel Rosman | Portfolio</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script>
+        // Tailwind dark mode configuration
+        tailwind.config = {
+            darkMode: 'class',
+        }
+    </script>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
-        body { font-family: 'Inter', sans-serif; }
+        body { font-family: 'Inter', sans-serif; transition: background-color 0.3s, color 0.3s; }
         .gradient-text { background: linear-gradient(90deg, #3b82f6, #2dd4bf); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
         html { scroll-behavior: smooth; }
     </style>
 </head>
-<body class="bg-slate-50 text-slate-900">
+<body class="bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100">
 
-    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto">
+    <nav class="p-6 flex justify-between items-center max-w-6xl mx-auto sticky top-0 z-50 bg-opacity-80 backdrop-blur-md">
         <div class="text-2xl font-bold border-b-4 border-blue-500 tracking-tighter">D.ROSMAN</div>
-        <div class="hidden md:flex space-x-8 font-medium">
-            <a href="#about" class="hover:text-blue-600 transition">About</a>
-            <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
-            <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
-            <a href="mailto:danielros883@gmail.com" class="hover:text-blue-600 transition">Contact</a>
+        <div class="flex items-center space-x-6">
+            <div class="hidden md:flex space-x-8 font-medium">
+                <a href="#about" class="hover:text-blue-600 transition">About</a>
+                <a href="#skills" class="hover:text-blue-600 transition">Skills</a>
+                <a href="#projects" class="hover:text-blue-600 transition">Projects</a>
+            </div>
+            <button id="theme-toggle" class="p-2 rounded-lg bg-slate-200 dark:bg-slate-800 hover:ring-2 ring-blue-400 transition">
+                <i id="theme-toggle-dark-icon" class="hidden fas fa-moon"></i>
+                <i id="theme-toggle-light-icon" class="hidden fas fa-sun text-yellow-400"></i>
+            </button>
         </div>
     </nav>
 
     <section class="max-w-6xl mx-auto px-6 py-24 flex flex-col items-center text-center">
-        <div class="mb-4 px-4 py-1 bg-blue-100 text-blue-700 rounded-full text-sm font-bold uppercase tracking-widest">Available for Internship</div>
+        <div class="mb-4 px-4 py-1 bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-200 rounded-full text-sm font-bold uppercase tracking-widest">
+            Available for Internship
+        </div>
         <h1 class="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight">Hi, I'm <span class="gradient-text">Daniel Rosman</span></h1>
-        <p class="text-xl md:text-2xl text-slate-600 max-w-3xl leading-relaxed">
+        <p class="text-xl md:text-2xl text-slate-600 dark:text-slate-400 max-w-3xl leading-relaxed">
             3rd Year Computer Science Student at <strong>SCE</strong>. 
             Specializing in <strong>Data Science & AI</strong>. 
-            Fullstack Developer (John Bryce) and DevOps Practitioner (IITC).
+            Fullstack Developer and DevOps Practitioner.
         </p>
         <div class="mt-10 flex flex-wrap justify-center gap-4">
             <a href="https://www.linkedin.com/in/daniel-rosman-759b37249/" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-lg font-bold hover:bg-blue-700 transition shadow-lg flex items-center gap-2">
                 <i class="fab fa-linkedin"></i> LinkedIn
             </a>
-            <a href="https://github.com/daniel13ros" target="_blank" class="bg-slate-800 text-white px-8 py-3 rounded-lg font-bold hover:bg-slate-900 transition shadow-lg flex items-center gap-2">
+            <a href="https://github.com/daniel13ros" target="_blank" class="bg-slate-800 dark:bg-slate-700 text-white px-8 py-3 rounded-lg font-bold hover:bg-slate-900 transition shadow-lg flex items-center gap-2">
                 <i class="fab fa-github"></i> GitHub
             </a>
-            <a href="mailto:danielros883@gmail.com" class="bg-white text-slate-800 border border-slate-200 px-8 py-3 rounded-lg font-bold hover:bg-slate-50 transition shadow-sm flex items-center gap-2">
-                <i class="fas fa-envelope"></i> Email Me
-            </a>
         </div>
     </section>
 
-    <section id="about" class="bg-white py-24">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-16 text-center">Educational Journey</h2>
-            <div class="grid md:grid-cols-3 gap-10">
-                <div class="relative p-8 bg-slate-50 rounded-2xl border border-slate-100 transition hover:shadow-md">
-                    <div class="absolute -top-5 left-8 bg-blue-600 text-white p-3 rounded-xl shadow-lg">
-                        <i class="fas fa-university fa-lg"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mt-4 mb-2">B.Sc. Computer Science</h3>
-                    <p class="text-blue-600 font-semibold mb-3 text-sm">SCE College | Year 3</p>
-                    <p class="text-slate-600 text-sm">Focusing on Deep Learning, Graph Theory, and Complex Systems.</p>
-                </div>
-                
-                <div class="relative p-8 bg-slate-50 rounded-2xl border border-slate-100 transition hover:shadow-md">
-                    <div class="absolute -top-5 left-8 bg-teal-500 text-white p-3 rounded-xl shadow-lg">
-                        <i class="fas fa-code fa-lg"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mt-4 mb-2">Fullstack Development</h3>
-                    <p class="text-teal-600 font-semibold mb-3 text-sm">John Bryce | Certification</p>
-                    <p class="text-slate-600 text-sm">Expertise in Java, TypeScript, MongoDB, and SQL databases.</p>
-                </div>
-
-                <div class="relative p-8 bg-slate-50 rounded-2xl border border-slate-100 transition hover:shadow-md">
-                    <div class="absolute -top-5 left-8 bg-purple-500 text-white p-3 rounded-xl shadow-lg">
-                        <i class="fas fa-server fa-lg"></i>
-                    </div>
-                    <h3 class="font-bold text-xl mt-4 mb-2">DevOps Engineering</h3>
-                    <p class="text-purple-600 font-semibold mb-3 text-sm">IITC Course</p>
-                    <p class="text-slate-600 text-sm">Mastering Git workflows, CI/CD pipelines, and Cloud infrastructure.</p>
-                </div>
+    <section id="about" class="py-24 max-w-6xl mx-auto px-6">
+        <div class="grid md:grid-cols-3 gap-10 text-center">
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 transition hover:scale-105">
+                <div class="text-blue-600 mb-4 text-3xl"><i class="fas fa-university"></i></div>
+                <h3 class="font-bold text-xl">B.Sc. CS</h3>
+                <p class="text-slate-500 text-sm mt-2">SCE College | Year 3</p>
+            </div>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 transition hover:scale-105">
+                <div class="text-teal-500 mb-4 text-3xl"><i class="fas fa-code"></i></div>
+                <h3 class="font-bold text-xl">Fullstack</h3>
+                <p class="text-slate-500 text-sm mt-2">John Bryce Graduate</p>
+            </div>
+            <div class="p-8 bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-100 dark:border-slate-800 transition hover:scale-105">
+                <div class="text-purple-500 mb-4 text-3xl"><i class="fas fa-server"></i></div>
+                <h3 class="font-bold text-xl">DevOps</h3>
+                <p class="text-slate-500 text-sm mt-2">IITC Professional Course</p>
             </div>
         </div>
     </section>
 
-    <section id="skills" class="py-24 max-w-6xl mx-auto px-6">
-        <h2 class="text-3xl font-bold mb-12 text-center">Tech Stack</h2>
-        <div class="flex flex-wrap justify-center gap-3">
-            <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold hover:border-blue-400 transition cursor-default">Python & PyTorch</span>
-            <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold hover:border-blue-400 transition cursor-default">Java & Spring</span>
-            <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold hover:border-blue-400 transition cursor-default">DevOps (Git, Linux)</span>
-            <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold hover:border-blue-400 transition cursor-default">TypeScript & Node.js</span>
-            <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold hover:border-blue-400 transition cursor-default">MongoDB & MySQL</span>
-            <span class="px-6 py-2 bg-white border border-slate-200 rounded-full text-slate-700 font-semibold hover:border-blue-400 transition cursor-default">Computer Vision</span>
-        </div>
-    </section>
-
-    <section id="projects" class="bg-slate-900 py-24 text-white">
-        <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-16 text-center">Featured Projects</h2>
-            <div class="grid md:grid-cols-2 gap-12">
-                <div class="group relative overflow-hidden rounded-3xl bg-slate-800 p-1">
-                    <div class="bg-slate-900 p-8 rounded-[1.4rem] h-full transition group-hover:bg-slate-800">
-                        <h3 class="text-2xl font-bold mb-4">Autonomous Drone Landing</h3>
-                        <p class="text-slate-400 mb-6 leading-relaxed">Computer Science final project focused on landing a drone on a dynamic target using Computer Vision and control algorithms.</p>
-                        <div class="flex gap-2">
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-400">Python</span>
-                            <span class="text-xs font-bold uppercase tracking-widest text-blue-400">OpenCV</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="group relative overflow-hidden rounded-3xl bg-slate-800 p-1">
-                    <div class="bg-slate-900 p-8 rounded-[1.4rem] h-full transition group-hover:bg-slate-800">
-                        <h3 class="text-2xl font-bold mb-4">Facial Super-Resolution</h3>
-                        <p class="text-slate-400 mb-6 leading-relaxed">Deep Learning model designed to enhance facial image quality while simultaneously performing attribute recognition.</p>
-                        <div class="flex gap-2">
-                            <span class="text-xs font-bold uppercase tracking-widest text-teal-400">PyTorch</span>
-                            <span class="text-xs font-bold uppercase tracking-widest text-teal-400">Deep Learning</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-12 text-center text-slate-400 bg-slate-900 border-t border-slate-800">
-        <p>© 2026 Daniel Rosman. Built with Git & Modern Tech.</p>
+    <footer class="py-12 text-center text-slate-400 border-t border-slate-200 dark:border-slate-800">
+        <p>© 2026 Daniel Rosman | Built with Dark Mode Support</p>
     </footer>
 
+    <script>
+        // Dark Mode Logic
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+        const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+        // Check local storage or system preference
+        if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            document.documentElement.classList.add('dark');
+            themeToggleLightIcon.classList.remove('hidden');
+        } else {
+            document.documentElement.classList.remove('dark');
+            themeToggleDarkIcon.classList.remove('hidden');
+        }
+
+        themeToggleBtn.addEventListener('click', function() {
+            themeToggleDarkIcon.classList.toggle('hidden');
+            themeToggleLightIcon.classList.toggle('hidden');
+
+            if (document.documentElement.classList.contains('dark')) {
+                document.documentElement.classList.remove('dark');
+                localStorage.setItem('color-theme', 'light');
+            } else {
+                document.documentElement.classList.add('dark');
+                localStorage.setItem('color-theme', 'dark');
+            }
+        });
+    </script>
 </body>
 </html>
